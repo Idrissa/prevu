@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150314123256) do
+ActiveRecord::Schema.define(version: 20150314125032) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,9 +37,11 @@ ActiveRecord::Schema.define(version: 20150314123256) do
     t.float    "montant_cotisation"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+    t.string   "matricule"
   end
 
   add_index "adherents", ["email"], name: "index_adherents_on_email", unique: true, using: :btree
+  add_index "adherents", ["matricule"], name: "index_adherents_on_matricule", unique: true, using: :btree
   add_index "adherents", ["username"], name: "index_adherents_on_username", unique: true, using: :btree
 
 end

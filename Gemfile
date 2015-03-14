@@ -15,6 +15,7 @@ group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem "better_errors"
 end
 
 gem 'therubyracer'
@@ -23,3 +24,5 @@ gem 'twitter-bootstrap-rails', '~> 3.2.0'
 
 gem 'simple_form', '~> 3.1.0'
 gem 'paperclip', '~> 4.2.1'
+gem 'momentjs-rails'
+gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
