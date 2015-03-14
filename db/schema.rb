@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150314180716) do
+ActiveRecord::Schema.define(version: 20150314181317) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -62,6 +62,11 @@ ActiveRecord::Schema.define(version: 20150314180716) do
   end
 
   add_index "formules", ["structure_assurance_id"], name: "index_formules_on_structure_assurance_id", using: :btree
+
+  create_table "formules_structure_sanitaires", id: false, force: :cascade do |t|
+    t.integer "structure_sanitaire_id", null: false
+    t.integer "formule_id",             null: false
+  end
 
   create_table "micro_assurances", force: :cascade do |t|
     t.datetime "created_at", null: false
