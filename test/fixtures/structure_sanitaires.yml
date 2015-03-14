@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nom: MyString
+  adresse: MyString
+  date_adhesion: 2015-03-14
+  actif: false
+  structure_id: 
+  structure_type: Structure
+
+two:
+  nom: MyString
+  adresse: MyString
+  date_adhesion: 2015-03-14
+  actif: false
+  structure_id: 
+  structure_type: Structure

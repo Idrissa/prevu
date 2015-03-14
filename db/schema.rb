@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150314154651) do
+ActiveRecord::Schema.define(version: 20150314180716) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,6 +50,29 @@ ActiveRecord::Schema.define(version: 20150314154651) do
   add_index "adherents", ["email"], name: "index_adherents_on_email", unique: true, using: :btree
   add_index "adherents", ["matricule"], name: "index_adherents_on_matricule", unique: true, using: :btree
 
+  create_table "formules", force: :cascade do |t|
+    t.integer  "structure_assurance_id"
+    t.string   "nom",                                null: false
+    t.integer  "periode",                            null: false
+    t.integer  "occurrence_periode",     default: 1, null: false
+    t.float    "montant_adhesion",                   null: false
+    t.float    "montant_cotisation",                 null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
+  end
+
+  add_index "formules", ["structure_assurance_id"], name: "index_formules_on_structure_assurance_id", using: :btree
+
+  create_table "micro_assurances", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "mutuelles", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "structure_assurances", force: :cascade do |t|
     t.string   "nom"
     t.string   "adresse"
@@ -63,6 +86,26 @@ ActiveRecord::Schema.define(version: 20150314154651) do
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
+    t.integer  "structure_id"
+    t.string   "structure_type"
   end
 
+  create_table "structure_sanitaires", force: :cascade do |t|
+    t.string   "nom",                               null: false
+    t.string   "adresse"
+    t.date     "date_adhesion"
+    t.boolean  "actif",             default: false
+    t.integer  "structure_id"
+    t.string   "structure_type"
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
+  end
+
+  add_index "structure_sanitaires", ["structure_type", "structure_id"], name: "index_structure_sanitaires_on_structure_type_and_structure_id", using: :btree
+
+  add_foreign_key "formules", "structure_assurances"
 end
