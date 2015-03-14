@@ -22,3 +22,4 @@ gem 'less-rails' #Sprockets (what Rails 3.1 uses for its asset pipeline) support
 gem 'twitter-bootstrap-rails', '~> 3.2.0'
 
 gem 'simple_form', '~> 3.1.0'
+gem 'paperclip', '~> 4.2.1'
