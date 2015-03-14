@@ -1,0 +1,16 @@
+<%= simple_form_for(@assurance) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :nom %>
+    <%= f.input :adresse %>
+    <%= f.input :date_adhesion %>
+    <%= f.input :numero_agrement %>
+    <%= f.input :logo %>
+    <%= f.input :couleur %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

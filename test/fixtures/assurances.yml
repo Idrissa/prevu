@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nom: MyString
+  adresse: MyString
+  date_adhesion: 2015-03-14
+  numero_agrement: MyString
+  couleur: MyString
+  actif: false
+
+two:
+  nom: MyString
+  adresse: MyString
+  date_adhesion: 2015-03-14
+  numero_agrement: MyString
+  couleur: MyString
+  actif: false
