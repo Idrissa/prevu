@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
   resources :micro_assurances
-
   resources :mutuelles
-
   resources :adherents
+
+  get "/log_out" => "sessions#destroy", :as => "log_out"
+  get "/log_in" => "sessions#new", :as => "log_in"
+  get "/sign_up" => "users#new", :as => "sign_up"
+  #root :to => "users#new"
+
+  resources :sessions
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

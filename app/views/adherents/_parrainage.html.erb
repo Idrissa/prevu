@@ -1,0 +1,26 @@
+<%= simple_form_for(@adherent) do |f| %>
+    <%= f.error_notification %>
+
+    <div class="form-inputs">
+      <%= f.input :affiliation, collection: Adherent.affiliations.keys%>
+      <%= f.file_field :avatar %>
+      <%= f.input :nom %>
+      <%= f.input :prenom %>
+      <%= f.input :sexe, collection: Adherent::SEXE %>
+      <%= f.input :status_matrimonial, collection: Adherent::MATRIMONIAL %>
+      <%= f.input :date_de_naissance, :as => :date_picker %>
+      <%= f.input :lieu_de_naissance %>
+      <%= f.input :adresse %>
+      <%= f.input :telephone1 %>
+      <%= f.input :telephone2 %>
+      <%= f.input :montant_cotisation %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
+<% end %>
+
+<script type="text/javascript">
+    $('.datetimepicker').datetimepicker();
+</script>

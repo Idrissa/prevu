@@ -26,7 +26,6 @@ ActiveRecord::Schema.define(version: 20150314154651) do
     t.string   "telephone1"
     t.string   "telephone2"
     t.string   "email"
-    t.string   "username"
     t.string   "password_digest"
     t.integer  "status"
     t.boolean  "payer"
@@ -35,14 +34,21 @@ ActiveRecord::Schema.define(version: 20150314154651) do
     t.datetime "last_delete"
     t.datetime "paiement_date"
     t.float    "montant_cotisation"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.string   "matricule"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+    t.string   "password_salt"
+    t.integer  "sexe"
+    t.integer  "affiliation"
+    t.integer  "parrain_id"
   end
 
   add_index "adherents", ["email"], name: "index_adherents_on_email", unique: true, using: :btree
   add_index "adherents", ["matricule"], name: "index_adherents_on_matricule", unique: true, using: :btree
-  add_index "adherents", ["username"], name: "index_adherents_on_username", unique: true, using: :btree
 
   create_table "structure_assurances", force: :cascade do |t|
     t.string   "nom"

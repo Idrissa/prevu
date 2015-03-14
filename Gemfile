@@ -27,3 +27,4 @@ gem 'paperclip', '~> 4.2.1'
 gem 'momentjs-rails'
 gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
 gem 'jquery-minicolors-rails'
+gem "bcrypt-ruby", :require => "bcrypt"
