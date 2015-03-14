@@ -37,9 +37,11 @@ ActiveRecord::Schema.define(version: 20150314130854) do
     t.float    "montant_cotisation"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+    t.string   "matricule"
   end
 
   add_index "adherents", ["email"], name: "index_adherents_on_email", unique: true, using: :btree
+  add_index "adherents", ["matricule"], name: "index_adherents_on_matricule", unique: true, using: :btree
   add_index "adherents", ["username"], name: "index_adherents_on_username", unique: true, using: :btree
 
   create_table "assurances", force: :cascade do |t|
@@ -48,9 +50,9 @@ ActiveRecord::Schema.define(version: 20150314130854) do
     t.date     "date_adhesion"
     t.string   "numero_agrement"
     t.string   "couleur"
-    t.boolean  "actif"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.boolean  "actif",             default: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
     t.string   "logo_file_name"
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
