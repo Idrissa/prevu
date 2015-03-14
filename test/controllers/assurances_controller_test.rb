@@ -2,13 +2,13 @@ require 'test_helper'
 
 class AssurancesControllerTest < ActionController::TestCase
   setup do
-    @assurance = assurances(:one)
+    @structure_assurance = assurances(:one)
   end
 
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:assurances)
+    assert_not_nil assigns(:structure_assurances)
   end
 
   test "should get new" do
@@ -18,30 +18,30 @@ class AssurancesControllerTest < ActionController::TestCase
 
   test "should create assurance" do
     assert_difference('Assurance.count') do
-      post :create, assurance: { actif: @assurance.actif, adresse: @assurance.adresse, couleur: @assurance.couleur, date_adhesion: @assurance.date_adhesion, nom: @assurance.nom, numero_agrement: @assurance.numero_agrement }
+      post :create, structure_assurance: { actif: @structure_assurance.actif, adresse: @structure_assurance.adresse, couleur: @structure_assurance.couleur, date_adhesion: @structure_assurance.date_adhesion, nom: @structure_assurance.nom, numero_agrement: @structure_assurance.numero_agrement }
     end
 
-    assert_redirected_to assurance_path(assigns(:assurance))
+    assert_redirected_to assurance_path(assigns(:structure_assurance))
   end
 
   test "should show assurance" do
-    get :show, id: @assurance
+    get :show, id: @structure_assurance
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @assurance
+    get :edit, id: @structure_assurance
     assert_response :success
   end
 
   test "should update assurance" do
-    patch :update, id: @assurance, assurance: { actif: @assurance.actif, adresse: @assurance.adresse, couleur: @assurance.couleur, date_adhesion: @assurance.date_adhesion, nom: @assurance.nom, numero_agrement: @assurance.numero_agrement }
-    assert_redirected_to assurance_path(assigns(:assurance))
+    patch :update, id: @structure_assurance, structure_assurance: { actif: @structure_assurance.actif, adresse: @structure_assurance.adresse, couleur: @structure_assurance.couleur, date_adhesion: @structure_assurance.date_adhesion, nom: @structure_assurance.nom, numero_agrement: @structure_assurance.numero_agrement }
+    assert_redirected_to assurance_path(assigns(:structure_assurance))
   end
 
   test "should destroy assurance" do
     assert_difference('Assurance.count', -1) do
-      delete :destroy, id: @assurance
+      delete :destroy, id: @structure_assurance
     end
 
     assert_redirected_to assurances_path

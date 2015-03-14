@@ -11,6 +11,7 @@
  * file per style scope.
  *
  *= require bootstrap-datetimepicker.min
+ *= require jquery.minicolors
  *= require_tree .
  *= require_self
  */

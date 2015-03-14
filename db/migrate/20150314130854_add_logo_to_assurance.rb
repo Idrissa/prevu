@@ -1,9 +1,9 @@
 class AddLogoToAssurance < ActiveRecord::Migration
   def self.up
-    add_attachment :assurances, :logo
+    add_attachment :structure_assurances, :logo
   end
 
   def self.down
-    remove_attachment :assurances, :logo
+    remove_attachment :structure_assurances, :logo
   end
 end

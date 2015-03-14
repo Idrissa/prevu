@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :assurances
+  resources :micro_assurances
+
+  resources :mutuelles
 
   resources :adherents
 

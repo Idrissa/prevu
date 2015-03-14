@@ -26,3 +26,4 @@ gem 'simple_form', '~> 3.1.0'
 gem 'paperclip', '~> 4.2.1'
 gem 'momentjs-rails'
 gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
+gem 'jquery-minicolors-rails'

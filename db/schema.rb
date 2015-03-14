@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150314130854) do
+ActiveRecord::Schema.define(version: 20150314154651) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 20150314130854) do
   add_index "adherents", ["matricule"], name: "index_adherents_on_matricule", unique: true, using: :btree
   add_index "adherents", ["username"], name: "index_adherents_on_username", unique: true, using: :btree
 
-  create_table "assurances", force: :cascade do |t|
+  create_table "structure_assurances", force: :cascade do |t|
     t.string   "nom"
     t.string   "adresse"
     t.date     "date_adhesion"

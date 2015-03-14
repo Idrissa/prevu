@@ -1,0 +1,2 @@
+module StructureAssurancesHelper
+end

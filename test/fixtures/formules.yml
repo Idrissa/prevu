@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  structure_assurance_id: 
+  nom: MyString
+  periode: 1
+  occurrence_periode: 1
+  montant_adhesion: 1.5
+  montant_cotisation: 1.5
+
+two:
+  structure_assurance_id: 
+  nom: MyString
+  periode: 1
+  occurrence_periode: 1
+  montant_adhesion: 1.5
+  montant_cotisation: 1.5

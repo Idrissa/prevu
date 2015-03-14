@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @structure_assurance.nom %>
+</p>
+
+<p>
+  <strong>Adresse:</strong>
+  <%= @structure_assurance.adresse %>
+</p>
+
+<p>
+  <strong>Date adhesion:</strong>
+  <%= @structure_assurance.date_adhesion %>
+</p>
+
+<p>
+  <strong>Numero agrement:</strong>
+  <%= @structure_assurance.numero_agrement %>
+</p>
+
+<p>
+  <strong>Couleur:</strong>
+  <%= @structure_assurance.couleur %>
+</p>
+
+<p>
+  <strong>Actif:</strong>
+  <%= @structure_assurance.actif %>
+</p>
+
+<%= link_to 'Edit', edit_assurance_path(@structure_assurance) %> |
+<%= link_to 'Back', assurances_path %>

@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Structure Assurances</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Adresse</th>
+      <th>Date adhesion</th>
+      <th>Numero agrement</th>
+      <th>Couleur</th>
+      <th>Actif</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @structure_assurances.each do |assurance| %>
+      <tr>
+        <td><%= assurance.nom %></td>
+        <td><%= assurance.adresse %></td>
+        <td><%= assurance.date_adhesion %></td>
+        <td><%= assurance.numero_agrement %></td>
+        <td><%= assurance.couleur %></td>
+        <td><%= assurance.actif %></td>
+        <td><%= link_to 'Show', assurance %></td>
+        <td><%= link_to 'Edit', edit_assurance_path(assurance) %></td>
+        <td><%= link_to 'Destroy', assurance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Assurance', new_assurance_path %>
