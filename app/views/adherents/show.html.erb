@@ -1,6 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <%= image_tag @adherent.avatar.url(:medium) %>
+</p>
+
+<p>
+  <strong>Matricule:</strong>
+  <%= @adherent.matricule %>
+</p>
+
+<p>
   <strong>Nom:</strong>
   <%= @adherent.nom %>
 </p>
@@ -12,7 +21,7 @@
 
 <p>
   <strong>Status matrimonial:</strong>
-  <%= @adherent.status_matrimonial %>
+  <%= Adherent::MATRIMONIAL.index(@adherent.status_matrimonial) %>
 </p>
 
 <p>
@@ -46,13 +55,13 @@
 </p>
 
 <p>
-  <strong>Username:</strong>
-  <%= @adherent.username %>
+  <strong>Sexe:</strong>
+  <%= Adherent::SEXE.index(@adherent.sexe) %>
 </p>
 
 <p>
   <strong>Status:</strong>
-  <%= @adherent.status %>
+  <%= Adherent::STATUS.index(@adherent.status) %>
 </p>
 
 <p>

@@ -1,6 +1,18 @@
 class AdherentsController < ApplicationController
   before_action :set_adherent, only: [:show, :edit, :update, :destroy]
 
+  def new
+    @adherent = Adherent.new
+  end
+
+  def signin
+    @adherent = Adherent.new(params[:adherent])
+    if @adherent.save
+      redirect_to root_url, :notice => "Signed up!"
+    else
+      render "new"
+    end
+  end
   # GET /adherents
   # GET /adherents.json
   def index
@@ -10,11 +22,6 @@ class AdherentsController < ApplicationController
   # GET /adherents/1
   # GET /adherents/1.json
   def show
-  end
-
-  # GET /adherents/new
-  def new
-    @adherent = Adherent.new
   end
 
   # GET /adherents/1/edit
@@ -69,6 +76,9 @@ class AdherentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def adherent_params
-      params.require(:adherent).permit(:nom, :prenom, :status_matrimonial, :date_de_naissance, :lieu_de_naissance, :adresse, :telephone1, :telephone2, :email, :username, :password, :password_confirmation, :status, :payer, :last_activation, :last_suspension, :last_delete, :paiement_date, :montant_cotisation)
+      params.require(:adherent).permit(:nom, :prenom, :status_matrimonial, :date_de_naissance, :lieu_de_naissance,
+                                       :adresse, :telephone1, :telephone2, :password_txt, :password_txt_confirmation,
+                                       :status, :payer, :last_activation, :last_suspension, :last_delete, :paiement_date,
+                                       :montant_cotisation, :avatar, :email, :sexe)
     end
 end
