@@ -1,0 +1,89 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @adherent.nom %>
+</p>
+
+<p>
+  <strong>Prenom:</strong>
+  <%= @adherent.prenom %>
+</p>
+
+<p>
+  <strong>Status matrimonial:</strong>
+  <%= @adherent.status_matrimonial %>
+</p>
+
+<p>
+  <strong>Date de naissance:</strong>
+  <%= @adherent.date_de_naissance %>
+</p>
+
+<p>
+  <strong>Lieu de naissance:</strong>
+  <%= @adherent.lieu_de_naissance %>
+</p>
+
+<p>
+  <strong>Adresse:</strong>
+  <%= @adherent.adresse %>
+</p>
+
+<p>
+  <strong>Telephone1:</strong>
+  <%= @adherent.telephone1 %>
+</p>
+
+<p>
+  <strong>Telephone2:</strong>
+  <%= @adherent.telephone2 %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @adherent.email %>
+</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @adherent.username %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @adherent.status %>
+</p>
+
+<p>
+  <strong>Payer:</strong>
+  <%= @adherent.payer %>
+</p>
+
+<p>
+  <strong>Last activation:</strong>
+  <%= @adherent.last_activation %>
+</p>
+
+<p>
+  <strong>Last suspension:</strong>
+  <%= @adherent.last_suspension %>
+</p>
+
+<p>
+  <strong>Last delete:</strong>
+  <%= @adherent.last_delete %>
+</p>
+
+<p>
+  <strong>Paiement date:</strong>
+  <%= @adherent.paiement_date %>
+</p>
+
+<p>
+  <strong>Montant cotisation:</strong>
+  <%= @adherent.montant_cotisation %>
+</p>
+
+<%= link_to 'Edit', edit_adherent_path(@adherent) %> |
+<%= link_to 'Back', adherents_path %>

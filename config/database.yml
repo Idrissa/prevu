@@ -24,7 +24,7 @@ default: &default
 development:
   <<: *default
   username: postgres
-  password: passer
+  password: massilia
   database: prevu_development
   host: localhost
 

@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Adherents</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Prenom</th>
+      <th>Status matrimonial</th>
+      <th>Date de naissance</th>
+      <th>Lieu de naissance</th>
+      <th>Adresse</th>
+      <th>Telephone1</th>
+      <th>Telephone2</th>
+      <th>Email</th>
+      <th>Username</th>
+      <th>Status</th>
+      <th>Payer</th>
+      <th>Last activation</th>
+      <th>Last suspension</th>
+      <th>Last delete</th>
+      <th>Paiement date</th>
+      <th>Montant cotisation</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @adherents.each do |adherent| %>
+      <tr>
+        <td><%= adherent.nom %></td>
+        <td><%= adherent.prenom %></td>
+        <td><%= adherent.status_matrimonial %></td>
+        <td><%= adherent.date_de_naissance %></td>
+        <td><%= adherent.lieu_de_naissance %></td>
+        <td><%= adherent.adresse %></td>
+        <td><%= adherent.telephone1 %></td>
+        <td><%= adherent.telephone2 %></td>
+        <td><%= adherent.email %></td>
+        <td><%= adherent.username %></td>
+        <td><%= adherent.status %></td>
+        <td><%= adherent.payer %></td>
+        <td><%= adherent.last_activation %></td>
+        <td><%= adherent.last_suspension %></td>
+        <td><%= adherent.last_delete %></td>
+        <td><%= adherent.paiement_date %></td>
+        <td><%= adherent.montant_cotisation %></td>
+        <td><%= link_to 'Show', adherent %></td>
+        <td><%= link_to 'Edit', edit_adherent_path(adherent) %></td>
+        <td><%= link_to 'Destroy', adherent, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Adherent', new_adherent_path %>
